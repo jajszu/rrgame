@@ -2,19 +2,30 @@
   display: none;
 }
 
-/* Styl terminal hacker */
+html, body {
+    height: 100%;             /* żeby body zajmowało cały ekran */
+    margin: 0;                /* usuwa domyślne marginesy */
+    padding: 0;
+}
+
 body {
-    background-color: #0d0d0d; /* bardzo ciemne tło */
-    color: #00ff00;           /* neonowa zieleń */
-    font-family: 'Courier New', Courier, monospace; /* klasyczna czcionka terminalowa */
-    font-size: 18px;          /* lekko większy, czytelny tekst */
+    display: flex;
+    flex-direction: column;   /* układ w kolumnie */
+    justify-content: center;  /* wyśrodkowanie pionowe */
+    align-items: center;      /* wyśrodkowanie poziome */
+    
+    background-color: #0d0d0d;  /* bardzo ciemne tło */
+    color: #00ff00;              /* neonowa zieleń */
+    font-family: 'Courier New', Courier, monospace; /* terminalowa czcionka */
+    font-size: 18px;
     line-height: 1.5;
     padding: 20px;
+    text-align: center;           /* wyrównanie tekstu na środku */
 }
 
 /* wszystkie paragrafy jako „etykiety terminalowe” */
 p {
-    margin: 5px 0;
+    margin: 20px 0;
     white-space: pre-wrap; /* zachowuje spacje i enter */
 }
 
