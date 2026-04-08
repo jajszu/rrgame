@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;   /* układ w kolumnie */
     justify-content: top;  /* wyśrodkowanie pionowe */
-    align-items: center;      /* wyśrodkowanie poziome */
+    align-items: left;      /* wyśrodkowanie poziome */
     
     background-color: #0d0d0d;  /* bardzo ciemne tło */
     color: #00ff00;              /* neonowa zieleń */
@@ -20,7 +20,7 @@ body {
     font-size: 18px;
     line-height: 1.5;
     padding: 20px;
-    text-align: center;           /* wyrównanie tekstu na środku */
+    text-align: left;           /* wyrównanie tekstu na środku */
 }
 
 /* wszystkie paragrafy jako „etykiety terminalowe” */
@@ -28,7 +28,6 @@ p {
     margin: 30px 0;
     white-space: pre-wrap;
     text-align: left; /* zachowuje spacje i enter */
-    width: 100%;
 }
 
 
