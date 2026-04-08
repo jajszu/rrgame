@@ -1,3 +1,77 @@
 .stage {
   display: none;
 }
+
+/* Styl terminal hacker */
+body {
+    background-color: #0d0d0d; /* bardzo ciemne tło */
+    color: #00ff00;           /* neonowa zieleń */
+    font-family: 'Courier New', Courier, monospace; /* klasyczna czcionka terminalowa */
+    font-size: 18px;          /* lekko większy, czytelny tekst */
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* wszystkie paragrafy jako „etykiety terminalowe” */
+p {
+    margin: 5px 0;
+    white-space: pre-wrap; /* zachowuje spacje i enter */
+}
+
+
+/* opcjonalnie: delikatny efekt „glow” dla neonowego tekstu */
+p {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+/* linki w terminalu */
+a {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
+/* przycisk odblokowania / interakcje */
+button,input{
+    background-color: #0d0d0d;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    border: 1px solid #00ff00;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: #003300;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+
+@keyframes flashRed {
+ 0% { color: #00ff00; transform: translateX(0); border: 1px solid #00ff00;}
+  10% { color: #ff0000; transform: translateX(-5px); border: 1px solid #ff0000;}
+  20% { color: #ff0000; transform: translateX(5px); border: 1px solid #ff0000;}
+  30% { color: #ff0000; transform: translateX(-5px);border: 1px solid #ff0000; }
+  40% { color: #ff0000; transform: translateX(5px); border: 1px solid #ff0000;}
+  50% { color: #ff0000; transform: translateX(-3px);border: 1px solid #ff0000; }
+  60% { color: #ff0000; transform: translateX(3px); border: 1px solid #ff0000;}
+  70% { color: #ff0000; transform: translateX(-2px); border: 1px solid #ff0000;}
+  80% { color: #ff0000; transform: translateX(2px);border: 1px solid #ff0000; }
+  90% { color: #ff0000; transform: translateX(-1px); border: 1px solid #ff0000;}
+  100% { color: #00ff00; transform: translateX(0); border: 1px solid #00ff00;}
+}
+
+input.flash-red {
+  animation: flashRed 0.7s ease-in-out;
+}
+
+input:focus {
+     background-color: #0d0d0d;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    border: 1px solid #00ff00;
+    padding: 5px 10px;
+    outline: none;
+}

@@ -1,3 +1,40 @@
+
+const codes = ['a','b','c','d','e']
+
+
+function checkCode()
+{
+    const input = document.getElementById("code");
+      let progress = localStorage.getItem("progress");
+
+  if (!progress) {
+    progress = 1;
+    saveProgress(1);
+  }
+
+
+  progress = parseInt(progress);
+  if(codes[progress - 1] == input.value)
+  {
+    unlockNextStage();
+    input.value = "";
+  }
+else{
+    flashInputRed(input);
+  }
+}
+
+function flashInputRed(inputElement) {
+    // usuń klasę, jeśli już była
+    inputElement.classList.remove("flash-red");
+
+    // wymuś reflow, żeby animacja zadziałała ponownie
+    void inputElement.offsetWidth;
+
+    // dodaj klasę do animacji
+    inputElement.classList.add("flash-red");
+}
+
 function hideAllStages() {
   const stages = document.querySelectorAll(".stage");
   stages.forEach(stage => stage.style.display = "none");
@@ -45,3 +82,7 @@ window.onload = function() {
   loadProgress();
 };
 
+function resetGame() {
+  localStorage.removeItem("progress");
+  location.reload();
+}
