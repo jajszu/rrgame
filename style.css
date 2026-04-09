@@ -97,25 +97,15 @@ input:focus {
     outline: none;
 }
 
-.map-wrapper {
-  border: 2px solid #00ff00;
-  box-shadow: 0 0 15px #00ff00;
-  background-color: #0d0d0d;
-  padding: 5px;
-  margin: 20px auto;
-  max-width: 95%;        /* dopasowanie do ekranu */
-  width: 800px;  
-  position: relative;        /* szerokość desktop */
-}
+
 
 /* responsywna mapa */
-.map-wrapper iframe {
+iframe {
   width: 100%;           /* dopasowanie do kontenera */
   height: 600px;  /* proporcja 4:3, można zmienić na 75% lub 56% */
   border: none;
 
   /* styl terminalowy / neon */
   filter: grayscale(100%) contrast(140%) brightness(60%) sepia(100%) hue-rotate(70deg) saturate(600%);
-  display: block;
 }
 
