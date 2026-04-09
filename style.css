@@ -87,3 +87,101 @@ input:focus {
     padding: 5px 10px;
     outline: none;
 }
+
+/* kontener kompasu */
+.compass-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  width: fit-content;
+}
+
+/* okrąg kompasu */
+#compass {
+  width: 140px;
+  height: 140px;
+  border: 2px solid #00ff00;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 
+    0 0 10px #00ff00,
+    inset 0 0 10px #003300;
+}
+
+/* linie pomocnicze (krzyż jak w radarze) */
+#compass::before,
+#compass::after {
+  content: "";
+  position: absolute;
+  background: #00ff00;
+  opacity: 0.3;
+}
+
+#compass::before {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#compass::after {
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* strzałka */
+.arrow {
+  width: 3px;
+  height: 55px;
+  background: #00ff00;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(0deg);
+  box-shadow: 0 0 10px #00ff00;
+}
+
+/* grot strzałki */
+.arrow::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -5px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #00ff00;
+  filter: drop-shadow(0 0 5px #00ff00);
+}
+
+/* tekst odległości */
+#distance {
+  margin-top: 15px;
+  font-size: 16px;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+/* efekt skanowania (opcjonalny ale kozacki) */
+#compass::marker {
+  display: none;
+}
+
+.compass-container::after {
+  content: "SCANNING...";
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.6;
+  animation: blink 1s infinite;
+}
+
+/* mruganie */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 0.2; }
+  25%, 75% { opacity: 1; }
+}
