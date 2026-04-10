@@ -1,5 +1,5 @@
 
-const codes = ['Lk15810','PNEN124D400','c','d','e']
+const codes = ['Lk15810','PNEN124D400','10001','ULICABASZTOWA20DZ.VKLEPARZ','4841534C4F3A2A2A2A2A2A']
 
 
 function checkCode()
