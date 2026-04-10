@@ -100,7 +100,7 @@ input:focus {
 
 
 /* responsywna mapa */
-iframe {
+iframe , img{
   width: 100%;           /* dopasowanie do kontenera */
   height: 600px;  /* proporcja 4:3, można zmienić na 75% lub 56% */
   border: none;
@@ -109,3 +109,6 @@ iframe {
   filter: grayscale(100%) contrast(140%) brightness(60%) sepia(100%) hue-rotate(70deg) saturate(600%);
 }
 
+img{
+    height: auto;
+}
